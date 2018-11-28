@@ -34,7 +34,7 @@ export function characterReducer(state = initialState, action: characterActions.
                 ...state,
                 loading: false,
                 loaded: true,
-                charactors: action.payload,
+                charactors: action.payload.characters,
             };
         }
 

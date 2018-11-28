@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
-import * as characterActions from '../../app/characters/state/character.actions';
+import {CharacterService } from '../characters/character.service';
 
 @Component({
   selector: 'app-header',
@@ -10,12 +10,13 @@ import * as characterActions from '../../app/characters/state/character.actions'
 })
 export class HeaderComponent implements OnInit {
 
+  constructor(){}
+
   ngOnInit() {
     console.log('started');
   }
 
   showCharactersComponent() {
-
   }
 
 }

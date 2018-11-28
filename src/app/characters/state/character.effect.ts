@@ -24,8 +24,8 @@ export class CharacterEffect {
         ),
         mergeMap((actions: characterActions.LoadCharacters) =>
             this.characterService.getCharacters().pipe(
-                map((charactors: Character[]) =>
-                    new characterActions.LoadCharactersSuccess(charactors)
+                map((characters: {characters: Character[]}) =>
+                    new characterActions.LoadCharactersSuccess(characters)
                 ),
                 catchError(err => of(new characterActions.LoadCharactersFail(err)))
             )

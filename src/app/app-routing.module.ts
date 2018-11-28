@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: "", component: IntroComponent },
   {
     path: "characters",
-    loadChildren: '../app/characters/characters.module#CharactersModule',
+    loadChildren: '../app/characters/characters.module#CharactersModule',  
   }
 ];
 
