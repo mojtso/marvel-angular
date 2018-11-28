@@ -10,23 +10,23 @@ export interface CharacterState {
 }
 
 export interface AppState extends fromRoot.AppState {
-    characters: CharacterState
+    characters: CharacterState;
 }
 
 export const initialState: CharacterState = {
     charactors: [],
     loading: false,
     loaded: false,
-    error: "",
-}
+    error: '',
+};
 
 export function characterReducer(state = initialState, action: characterActions.Action): CharacterState {
-    switch(action.type) {
+    switch (action.type) {
         case characterActions.CharacterActiontypes.LOAD_CHARACTERS: {
             return {
                 ...state,
                 loading: true,
-            }
+            };
         }
 
         case characterActions.CharacterActiontypes.LOAD_CHARACTERS_SUCCESS: {
@@ -34,8 +34,8 @@ export function characterReducer(state = initialState, action: characterActions.
                 ...state,
                 loading: false,
                 loaded: true,
-                charactors: action.payload
-            }
+                charactors: action.payload,
+            };
         }
 
         case characterActions.CharacterActiontypes.LOAD_CHARACTERS_FAIL: {
@@ -43,7 +43,7 @@ export function characterReducer(state = initialState, action: characterActions.
                 ...state,
                 loading: false,
                 loaded: false,
-            }
+            };
         }
         default: {
             return state;
@@ -52,12 +52,12 @@ export function characterReducer(state = initialState, action: characterActions.
 }
 
 /**
- * 
- * 
- * 
+ *
+ *
+ *
  */
 
- /* 
+ /*
 {
     "id": 1011297,
     "name": "Agent Brand",

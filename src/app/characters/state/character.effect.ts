@@ -7,13 +7,13 @@ import { Observable, of } from 'rxjs';
 import { map, mergeMap, catchError } from 'rxjs/operators';
 
 import { CharacterService } from '../character.service';
-import * as characterActions from "../state/character.actions";
+import * as characterActions from '../state/character.actions';
 import { Character } from '../character.model';
 
 
 @Injectable()
 export class CharacterEffect {
-    
+
     constructor(private actions$: Actions, private characterService: CharacterService) {
     }
 
@@ -22,9 +22,9 @@ export class CharacterEffect {
         ofType<characterActions.LoadCharacters>(
             characterActions.CharacterActiontypes.LOAD_CHARACTERS
         ),
-        mergeMap((actions: characterActions.LoadCharacters) => 
+        mergeMap((actions: characterActions.LoadCharacters) =>
             this.characterService.getCharacters().pipe(
-                map((charactors: Character[]) => 
+                map((charactors: Character[]) =>
                     new characterActions.LoadCharactersSuccess(charactors)
                 ),
                 catchError(err => of(new characterActions.LoadCharactersFail(err)))

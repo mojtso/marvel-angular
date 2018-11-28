@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
 import * as characterActions from '../state/character.actions';
 
@@ -11,7 +12,7 @@ import * as characterActions from '../state/character.actions';
 })
 export class CharacterListComponent implements OnInit {
 
-  characters;
+  characters$: Observable<any>;
 
   constructor(private store: Store<any>) { }
 

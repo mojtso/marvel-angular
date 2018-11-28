@@ -1,5 +1,5 @@
 
-/* 
+/*
 {
     "id": 1011297,
     "name": "Agent Brand",
@@ -12,8 +12,9 @@
 **/
 
 export interface Character {
-    id?: number;
+    id?: any;
     name: string;
     description: string;
     modified: string;
+    thumbnail: string;
 }

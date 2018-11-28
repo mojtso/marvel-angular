@@ -13,9 +13,7 @@ import { CharacterComponent } from './character/character.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 
 const characterRoutes: Routes = [
-
-  { path: "", component: CharacterListComponent },
-  
+  { path: '', component: CharacterListComponent },
 ];
 
 @NgModule({
@@ -23,7 +21,7 @@ const characterRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(characterRoutes),
-    StoreModule.forFeature("characters", characterReducer),
+    StoreModule.forFeature('characters', characterReducer),
     EffectsModule.forFeature([CharacterEffect])
   ]
 })
