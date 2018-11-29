@@ -1,5 +1,5 @@
-/* 
-Light green: #7ed65f 
+/*
+Light green: #7ed65f
 Medium green: #55c57a
 Dark green: #28b485
 */
@@ -20,6 +20,11 @@ body {
     /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
+}
+
+main {
+  padding: 20px;
+  position: relative;
 }
 
 .header {
@@ -46,7 +51,7 @@ body {
 
 .text-box {
     position: absolute;
-    top: 0;
+    top: 20%;
     left: 50%;
     /* background-color: rgba(212, 64, 64, 0.801); */
     transform: translate(-50%, 50%);
@@ -94,7 +99,7 @@ body {
 
     100% {
         opacity: 1;
-        transform: translate(0) 
+        transform: translate(0)
     }
 }
 
@@ -110,7 +115,7 @@ body {
 
     100% {
         opacity: 1;
-        transform: translate(0) 
+        transform: translate(0)
     }
 }
 

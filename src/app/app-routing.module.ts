@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { IntroComponent } from './intro/intro.component';
- 
+
 
 const routes: Routes = [
-  { 
-    path: '', 
+  {
+    path: '',
     component: IntroComponent,
   },
   {
     path: 'characters',
-    loadChildren: '../app/characters/characters.module#CharactersModule',  
+    loadChildren: '../app/characters/characters.module#CharactersModule',
   }
 ];
 

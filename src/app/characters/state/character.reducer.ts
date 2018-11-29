@@ -3,7 +3,7 @@ import { Character } from '../character.model';
 import * as fromRoot from '../../state/app-state';
 
 export interface CharacterState {
-    charactors: Character[];
+    characters: Character[];
     loading: boolean;
     loaded: boolean;
     error: string;
@@ -14,7 +14,7 @@ export interface AppState extends fromRoot.AppState {
 }
 
 export const initialState: CharacterState = {
-    charactors: [],
+    characters: [],
     loading: false,
     loaded: false,
     error: '',
@@ -34,13 +34,14 @@ export function characterReducer(state = initialState, action: characterActions.
                 ...state,
                 loading: false,
                 loaded: true,
-                charactors: action.payload.characters,
+                characters: action.payload,
             };
         }
 
         case characterActions.CharacterActiontypes.LOAD_CHARACTERS_FAIL: {
             return {
                 ...state,
+                characters: [],
                 loading: false,
                 loaded: false,
             };

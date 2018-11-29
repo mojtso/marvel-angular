@@ -4,7 +4,6 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import * as characterActions from '../state/character.actions';
-import { Character } from '../character.model';
 
 @Component({
   selector: 'app-character-list',
@@ -13,12 +12,16 @@ import { Character } from '../character.model';
 })
 export class CharacterListComponent implements OnInit {
 
-  characters$;
+  characters;
 
-  constructor(private store: Store<any>) { }
+  constructor(private store: Store<any>) {
+    this.store.dispatch(new characterActions.LoadCharacters());
+  }
 
   ngOnInit() {
-    this.characters$ = this.store.dispatch(new characterActions.LoadCharacters());
-    console.log(this.characters$)
+    this.store.subscribe(state => {
+      this.characters = state.characters.characters;
+      console.log(this.characters);
+    });
   }
 }

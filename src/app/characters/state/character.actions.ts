@@ -15,8 +15,7 @@ export class LoadCharacters implements Action {
 export class LoadCharactersSuccess implements Action {
     readonly type = CharacterActiontypes.LOAD_CHARACTERS_SUCCESS;
 
-    constructor(public payload: { characters: Character[]}) {
-        console.log(payload);
+    constructor(public payload:  Character[]) {
     }
 }
 
