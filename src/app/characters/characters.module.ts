@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 import { StoreModule } from '@ngrx/store';
 
 import { EffectsModule, Actions } from '@ngrx/effects';
@@ -12,13 +13,15 @@ import { CharacterEffect } from './state/character.effect';
 
 import { CharacterComponent } from './character/character.component';
 import { CharacterListComponent } from './character-list/character-list.component';
+import { CharacterDetailsComponent } from './character-details/character-details.component';
+import { CharacterEventsEmitterDataService } from './shared/character-event-emitter.service';
 
 const characterRoutes: Routes = [
   { path: '', component: CharacterListComponent },
 ];
 
 @NgModule({
-  declarations: [CharacterComponent, CharacterListComponent],
+  declarations: [CharacterComponent, CharacterListComponent, CharacterDetailsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(characterRoutes),
@@ -26,6 +29,8 @@ const characterRoutes: Routes = [
     EffectsModule.forFeature([CharacterEffect]),
     ScrollingModule,
     MatGridListModule,
-  ]
+    MatCardModule,
+  ],
+  providers: [CharacterEventsEmitterDataService]
 })
 export class CharactersModule { }
