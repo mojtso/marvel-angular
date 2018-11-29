@@ -13,6 +13,7 @@ import { CharacterComponent } from './character/character.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 
 const characterRoutes: Routes = [
+  { path: '', component: CharacterComponent },
   { path: '', component: CharacterListComponent },
 ];
 

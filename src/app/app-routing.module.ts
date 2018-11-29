@@ -2,11 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { IntroComponent } from './intro/intro.component';
+ 
 
 const routes: Routes = [
-  { path: "", component: IntroComponent },
+  { 
+    path: '', 
+    component: IntroComponent,
+  },
   {
-    path: "characters",
+    path: 'characters',
     loadChildren: '../app/characters/characters.module#CharactersModule',  
   }
 ];
