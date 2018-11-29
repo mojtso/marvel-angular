@@ -1,11 +1,14 @@
 .example-viewport {
-  height: 250px;
-  width: 30%;
-  border: 1px solid black;
-  top: 20px;
-  left: 20%;
+  height: 300px;
+  width: 300px;
+  border: 1.5px solid lightgray;
+  left: -2%;
 }
 
 .example-item {
   height: 50px;
+}
+
+mat-grid-tile {
+  background: rgba(234, 239, 245, 0.781);
 }

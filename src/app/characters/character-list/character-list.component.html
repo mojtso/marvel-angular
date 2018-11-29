@@ -1,7 +1,16 @@
-<div class="list-container">
-  <cdk-virtual-scroll-viewport itemSize=2 minBufferPx="200" maxBufferPx="400" class="example-viewport">
-      <div *cdkVirtualFor='let character of characters'>
-        <app-character [character]="character"></app-character>
+<mat-grid-list cols="2" rowHeight="2:1.5">
+  <mat-grid-tile>
+      <div>
+          <cdk-virtual-scroll-viewport itemSize=2 minBufferPx="200" maxBufferPx="400" class="example-viewport">
+              <div *cdkVirtualFor='let character of characters' (click)="selectCharacter(character)">
+                <app-character [character]="character"></app-character>
+              </div>
+          </cdk-virtual-scroll-viewport>
+        </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+      <div class="">
+
       </div>
-  </cdk-virtual-scroll-viewport>
-</div>
+  </mat-grid-tile>
+</mat-grid-list>

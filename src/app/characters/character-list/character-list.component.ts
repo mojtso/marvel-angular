@@ -24,4 +24,8 @@ export class CharacterListComponent implements OnInit {
       console.log(this.characters);
     });
   }
+
+  selectCharacter(character) {
+    console.log(character);
+  }
 }

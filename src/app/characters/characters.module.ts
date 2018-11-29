@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 import { StoreModule } from '@ngrx/store';
 
 import { EffectsModule, Actions } from '@ngrx/effects';
@@ -25,6 +25,7 @@ const characterRoutes: Routes = [
     StoreModule.forFeature('characters', characterReducer),
     EffectsModule.forFeature([CharacterEffect]),
     ScrollingModule,
+    MatGridListModule,
   ]
 })
 export class CharactersModule { }
