@@ -21,10 +21,6 @@ body {
     color: #777;
 }
 
-main {
-  padding: 20px;
-  position: relative;
-}
 
 .header {
     height: 65vh;
@@ -50,7 +46,7 @@ main {
 
 .text-box {
     position: absolute;
-    top: 20%;
+    top: 0%;
     left: 50%;
     /* background-color: rgba(212, 64, 64, 0.801); */
     transform: translate(-50%, 50%);

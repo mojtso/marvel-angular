@@ -1,19 +1,17 @@
-import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-import { Observable } from "rxjs";
+import { Observable } from 'rxjs';
 
-import { Character } from "./character.model";
+import { Character } from './character.model';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class CharacterService {
-    private charactersUrl = "http://localhost:3000/characters";
-  
+    private charactersUrl = 'https://marvel-node-app.herokuapp.com/characters';
     constructor(private http: HttpClient) {}
-  
-    getCharacters(): Observable<{characters: Character[]}> {
-        return this.http.get<{characters: Character[]}>(this.charactersUrl);
+    getCharacters(): Observable<Character[]> {
+        return this.http.get<Character[]>(this.charactersUrl);
     }
-}  
+}

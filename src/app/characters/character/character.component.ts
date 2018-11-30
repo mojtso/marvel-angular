@@ -13,7 +13,6 @@ export class CharacterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.character);
   }
 
 }
