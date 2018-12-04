@@ -10,6 +10,7 @@ import { Character } from './character.model';
 })
 export class CharacterService {
     private charactersUrl = 'https://marvel-node-app.herokuapp.com/characters';
+    // private charactersUrl = 'http://localhost:3000/characters';
     constructor(private http: HttpClient) {}
     getCharacters(): Observable<Character[]> {
         return this.http.get<Character[]>(this.charactersUrl);

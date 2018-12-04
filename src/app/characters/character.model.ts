@@ -16,5 +16,22 @@ export interface Character {
     name: string;
     description: string;
     modified: string;
-    thumbnail: string;
+    thumbnail: Thumbnail;
+    comics: Comic[];
+    stories: Story[];
+}
+
+export interface Thumbnail {
+    path: string;
+    extension: string;
+}
+
+export interface Comic {
+    resourceURI: string;
+    name: string;
+}
+
+export interface Story {
+    resourceURI: number;
+    name: string;
 }

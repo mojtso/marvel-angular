@@ -3,6 +3,7 @@
       <div>
           <cdk-virtual-scroll-viewport itemSize=2 minBufferPx="200" maxBufferPx="400" class="example-viewport">
               <div *cdkVirtualFor='let character of characters' (click)="selectCharacter(character)">
+
                 <app-character [character]="character"></app-character>
               </div>
           </cdk-virtual-scroll-viewport>
