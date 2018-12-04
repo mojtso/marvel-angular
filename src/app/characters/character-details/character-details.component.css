@@ -1,0 +1,14 @@
+.example-viewport {
+  height: 100px;
+  width: 400px;
+  border: 1.5px solid lightgray;
+  left: -2%;
+}
+
+.example-item {
+  height: 50px;
+}
+
+.content {
+  padding-top: 30px;
+}

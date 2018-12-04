@@ -5,6 +5,22 @@
     <mat-card-subtitle>{{selectedCharacter.description}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    
+    <div class="content">
+        <p>Comics: {{selectedCharacter.comics.length}}</p>
+        <cdk-virtual-scroll-viewport itemSize=2 minBufferPx="200" maxBufferPx="400" class="example-viewport">
+
+            <div *cdkVirtualFor='let comic of selectedCharacter.comics'>
+                <p>{{comic.name}}</p>
+            </div>
+        </cdk-virtual-scroll-viewport>
+    </div>
+    <div class="content">
+        <p>Stories: {{selectedCharacter.stories.length}}</p>
+        <cdk-virtual-scroll-viewport itemSize=2 minBufferPx="200" maxBufferPx="400" class="example-viewport">
+            <div *cdkVirtualFor='let story of selectedCharacter.stories'>
+                <p>{{story.name}}</p>
+            </div>
+        </cdk-virtual-scroll-viewport>
+    </div>
   </mat-card-content>
 </mat-card>
